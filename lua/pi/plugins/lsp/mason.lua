@@ -25,7 +25,6 @@ return {
     })
 
     mason_lspconfig.setup({
-      -- list of servers for mason to install
       ensure_installed = {
         "html",
         "cssls",
@@ -37,6 +36,7 @@ return {
         "prismals",
         "pyright",
       },
+      automatic_enable = false, -- mason-lspconfig v2: let us handle lspconfig setup manually
     })
 
     mason_tool_installer.setup({
